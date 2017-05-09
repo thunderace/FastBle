@@ -21,7 +21,7 @@ public class UserActivity extends AppCompatActivity {
 
     private void initView() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("联系作者");
+        toolbar.setTitle(getResources().getString(R.string.contact_author));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

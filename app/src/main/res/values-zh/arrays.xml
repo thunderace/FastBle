@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="modesArray">
+        <item>"扫描所有设备，并显示"</item>
+        <item>"扫描指定广播名的设备，并连接（唯一广播名）"</item>
+        <item>"扫描指定广播名的设备，并连接（模糊广播名）"</item>
+        <item>"扫描指定广播名的设备，并连接（多个广播名）"</item>
+        <item>"扫描指定广播名的设备，并连接（模糊、多个广播名）"</item>
+        <item>"扫描指定物理地址的设备，并连接"</item>
+    </string-array>
+    <string-array name="commandArray">
+        <item>服务列表</item>
+        <item>特征列表</item>
+        <item>操作控制台</item>
+    </string-array>
+</resources>

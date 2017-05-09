@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">FastBLE</string>
+    <string name="app_name" translatable="false">FastBLE</string>
+    <string name="select_scan_mode">Select scan mode</string>
+    <string name="contact_author">Contact</string>
+    <string name="start_scanning">Start Scan</string>
+    <string name="stop_scanning">Stop Scan</string>
+    <string name="enter_bt_mac">Enter the BT device MAC address</string>
+    <string name="enter_bt_name">Enter the BT device radio name</string>
+    <string name="enter_multiple_bt_address">enter BT addresses separated by commas</string>
+    <string name="feature">Feature</string>
+    <string name="characteristic">Characteristic</string>
+    <string name="mode" translatable="false">mode</string>
+    <string name="enter_hex_command">Enter the HEX format command</string>
+    <string name="device_name">Enter your device name here</string>
+    <string name="device_mac">Enter yopur device MAC address here</string>
+    <string name="search_for_equipment">Search for equipment</string>
+    <string name="connection_failed">Connection failed</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="please_enter_MAC_first">Please enter the MAC address first</string>
+    <string name="please_enter_BT_broadcast_name_first">Please enter BT broadcat name first</string>
+    <string name="select_operation_type">Select operation type</string>
+    <string name="data_changes">Data changes :</string>
+    <string name="write">Write</string>
+    <string name="open_notification">Open the notification</string>
+    <string name="close_notification">Close notification</string>
+    <string name="feature_list">Feature list</string>
+    <string name="device_broadcast_name">Device broadcast name</string>
+    <string name="mac_addr">MAC address</string>
+    <string name="service">Service</string>
+    <string name="type_main_service">"Type (Main service) "</string>
 </resources>

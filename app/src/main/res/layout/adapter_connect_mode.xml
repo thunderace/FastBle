@@ -24,7 +24,7 @@
             android:layout_marginLeft="15dp"
             android:layout_toLeftOf="@+id/img_next"
             android:layout_toRightOf="@id/img_scan"
-            android:text="mode"
+            android:text="@string/mode"
             android:textSize="13sp" />
 
         <ImageView

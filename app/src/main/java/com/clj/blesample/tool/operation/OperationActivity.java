@@ -25,14 +25,14 @@ public class OperationActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private List<Fragment> fragments = new ArrayList<>();
     private int currentPage = 0;
-    private String[] titles = new String[]{"服务列表", "特征列表", "操作控制台"};
+    private String[] titles;
 
     private BluetoothService mBluetoothService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        titles = getResources().getStringArray(R.array.commandArray);
         setContentView(R.layout.activity_operation);
         initView();
         bindService();
@@ -63,7 +63,7 @@ public class OperationActivity extends AppCompatActivity {
 
     private void initView() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("特征列表");
+        toolbar.setTitle(getResources().getString(R.string.feature));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

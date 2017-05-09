@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="modesArray">
+        <item>Scan and display all devices</item>
+        <item>Scan device that match the broadcast name and connect (unique broadcast name)</item>
+        <item>Scan device that match the broadcast name and connect (blur the broadcast name)</item>
+        <item>Scan device that match the broadcast name and connect (multiple broadcast names)</item>
+        <item>Scan device that match the broadcast name and connect (blur, multiple broadcast names)</item>
+        <item>Scan device that match the physical address and connect to it</item>
+    </string-array>
+    <string-array name="commandArray">
+        <item>Service list</item>
+        <item>Feature list</item>
+        <item>Operation console</item>
+    </string-array>
+</resources>

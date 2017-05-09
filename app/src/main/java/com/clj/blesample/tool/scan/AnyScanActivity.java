@@ -59,7 +59,7 @@ public class AnyScanActivity extends AppCompatActivity implements View.OnClickLi
 
     private void initView() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("搜索设备");
+        toolbar.setTitle(getResources().getString(R.string.search_for_equipment));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -235,7 +235,7 @@ public class AnyScanActivity extends AppCompatActivity implements View.OnClickLi
             btn_start.setEnabled(true);
             btn_stop.setVisibility(View.INVISIBLE);
             progressDialog.dismiss();
-            Toast.makeText(AnyScanActivity.this, "连接失败", Toast.LENGTH_LONG).show();
+            Toast.makeText(AnyScanActivity.this, getResources().getString(R.string.connection_failed), Toast.LENGTH_LONG).show();
         }
 
         @Override
@@ -246,7 +246,7 @@ public class AnyScanActivity extends AppCompatActivity implements View.OnClickLi
             img_loading.clearAnimation();
             btn_start.setEnabled(true);
             btn_stop.setVisibility(View.INVISIBLE);
-            Toast.makeText(AnyScanActivity.this, "连接断开", Toast.LENGTH_LONG).show();
+            Toast.makeText(AnyScanActivity.this, getResources().getString(R.string.disconnected), Toast.LENGTH_LONG).show();
         }
 
         @Override

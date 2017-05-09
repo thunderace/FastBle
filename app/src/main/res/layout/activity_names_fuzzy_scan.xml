@@ -46,7 +46,7 @@
         android:id="@+id/et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="请输入多个设备的蓝牙广播名， 以英文逗号隔开"
+        android:hint="@string/enter_multiple_bt_address"
         android:padding="10dp"
         android:textSize="14sp" />
 

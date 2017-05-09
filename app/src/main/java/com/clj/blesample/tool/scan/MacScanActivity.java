@@ -52,7 +52,7 @@ public class MacScanActivity extends AppCompatActivity implements View.OnClickLi
 
     private void initView() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("搜索设备");
+        toolbar.setTitle(getResources().getString(R.string.search_for_equipment));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -79,7 +79,7 @@ public class MacScanActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.btn_start:
                 String mac = et.getText().toString();
                 if (TextUtils.isEmpty(mac)) {
-                    Toast.makeText(this, "请先输入MAC地址", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, getResources().getString(R.string.please_enter_MAC_first), Toast.LENGTH_LONG).show();
                 } else {
                     if (mBluetoothService == null) {
                         bindService();
@@ -151,7 +151,7 @@ public class MacScanActivity extends AppCompatActivity implements View.OnClickLi
             btn_start.setEnabled(true);
             btn_stop.setVisibility(View.INVISIBLE);
             progressDialog.dismiss();
-            Toast.makeText(MacScanActivity.this, "连接失败", Toast.LENGTH_LONG).show();
+            Toast.makeText(MacScanActivity.this, getResources().getString(R.string.connection_failed), Toast.LENGTH_LONG).show();
         }
 
         @Override
@@ -160,7 +160,7 @@ public class MacScanActivity extends AppCompatActivity implements View.OnClickLi
             btn_start.setEnabled(true);
             btn_stop.setVisibility(View.INVISIBLE);
             progressDialog.dismiss();
-            Toast.makeText(MacScanActivity.this, "连接断开", Toast.LENGTH_LONG).show();
+            Toast.makeText(MacScanActivity.this,  getResources().getString(R.string.disconnected), Toast.LENGTH_LONG).show();
         }
 
         @Override

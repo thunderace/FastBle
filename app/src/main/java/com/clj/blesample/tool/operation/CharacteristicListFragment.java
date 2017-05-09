@@ -77,7 +77,7 @@ public class CharacteristicListFragment extends Fragment {
 
                 if (propList.size() > 1) {
                     new AlertDialog.Builder(getActivity())
-                            .setTitle("选择操作类型")
+                            .setTitle(getResources().getString(R.string.select_operation_type))
                             .setItems(propNameList.toArray(new String[propNameList.size()]), new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
@@ -158,7 +158,7 @@ public class CharacteristicListFragment extends Fragment {
             BluetoothGattCharacteristic characteristic = characteristicList.get(position);
             String uuid = characteristic.getUuid().toString();
 
-            holder.txt_title.setText(String.valueOf("特征" + "（" + position + ")"));
+            holder.txt_title.setText(String.valueOf(getResources().getString(R.string.feature) + "（" + position + ")"));
             holder.txt_uuid.setText(uuid);
 
             StringBuilder property = new StringBuilder();
@@ -187,7 +187,7 @@ public class CharacteristicListFragment extends Fragment {
                 property.delete(property.length() - 2, property.length() - 1);
             }
             if (property.length() > 0) {
-                holder.txt_type.setText(String.valueOf("特性" + "( " + property.toString() + ")"));
+                holder.txt_type.setText(String.valueOf(getResources().getString(R.string.characteristic)  + "( " + property.toString() + ")"));
                 holder.img_next.setVisibility(View.VISIBLE);
             } else {
                 holder.img_next.setVisibility(View.INVISIBLE);

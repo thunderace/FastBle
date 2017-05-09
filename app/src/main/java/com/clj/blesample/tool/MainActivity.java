@@ -27,14 +27,6 @@ import com.clj.blesample.tool.scan.NamesScanActivity;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private String[] modes = new String[]{
-            "扫描所有设备，并显示",
-            "扫描指定广播名的设备，并连接（唯一广播名）",
-            "扫描指定广播名的设备，并连接（模糊广播名）",
-            "扫描指定广播名的设备，并连接（多个广播名）",
-            "扫描指定广播名的设备，并连接（模糊、多个广播名）",
-            "扫描指定物理地址的设备，并连接"};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ListView mListView = (ListView) findViewById(R.id.list);
-        mListView.setAdapter(new ConnectModeAdapter(this, modes));
+        mListView.setAdapter(new ConnectModeAdapter(this, getResources().getStringArray(R.array.modesArray)));
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

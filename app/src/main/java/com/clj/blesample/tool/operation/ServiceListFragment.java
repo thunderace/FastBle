@@ -63,8 +63,8 @@ public class ServiceListFragment extends Fragment {
         String name = mBluetoothService.getName();
         String mac = mBluetoothService.getMac();
         BluetoothGatt gatt = mBluetoothService.getGatt();
-        txt_name.setText(String.valueOf("设备广播名：" + name));
-        txt_mac.setText(String.valueOf("MAC地址: " + mac));
+        txt_name.setText(String.valueOf(getResources().getString(R.string.device_broadcast_name) + ":" + name));
+        txt_mac.setText(String.valueOf(getResources().getString(R.string.mac_addr) + ":" + mac));
 
         mResultAdapter.clear();
         for (final BluetoothGattService service : gatt.getServices()) {
@@ -125,9 +125,9 @@ public class ServiceListFragment extends Fragment {
             BluetoothGattService service = bluetoothGattServices.get(position);
             String uuid = service.getUuid().toString();
 
-            holder.txt_title.setText(String.valueOf("服务" + "（" + position + ")"));
+            holder.txt_title.setText(String.valueOf(getResources().getString(R.string.service) + "（" + position + ")"));
             holder.txt_uuid.setText(uuid);
-            holder.txt_type.setText("类型（主服务）");
+            holder.txt_type.setText(getResources().getString(R.string.type_main_service));
             return convertView;
         }
 

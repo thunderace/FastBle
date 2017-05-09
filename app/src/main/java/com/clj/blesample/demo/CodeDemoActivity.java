@@ -30,9 +30,7 @@ public class CodeDemoActivity extends AppCompatActivity {
     private static final String SAMPLE_WRITE_DATA = "000000000000000";                  // 要写入设备某一个character的指令
 
     private static final long TIME_OUT = 5000;                                          // 扫描超时时间
-    private static final String DEVICE_NAME = "这里写你的设备名";                         // 符合连接规则的蓝牙设备名
     private static final String[] DEVICE_NAMES = new String[]{};                        // 符合连接规则的蓝牙设备名
-    private static final String DEVICE_MAC = "这里写你的设备地址";                        // 符合连接规则的蓝牙设备地址
     private static final String TAG = "ble_sample";
 
     private BleManager bleManager;                                                      // Ble核心管理类
@@ -73,7 +71,7 @@ public class CodeDemoActivity extends AppCompatActivity {
     /**
      * 刷新缓存操作
      */
-    private void refersh() {
+    private void refresh() {
         bleManager.refreshDeviceCache();
     }
 
@@ -141,7 +139,7 @@ public class CodeDemoActivity extends AppCompatActivity {
      */
     private void scanAndConnect1() {
         bleManager.scanNameAndConnect(
-                DEVICE_NAME,
+                getResources().getString(R.string.device_name),
                 TIME_OUT,
                 false,
                 new BleGattCallback() {
@@ -179,7 +177,7 @@ public class CodeDemoActivity extends AppCompatActivity {
      */
     private void scanAndConnect2() {
         bleManager.scanfuzzyNameAndConnect(
-                DEVICE_NAME,
+                getResources().getString(R.string.device_name),
                 TIME_OUT,
                 false,
                 new BleGattCallback() {
@@ -290,7 +288,7 @@ public class CodeDemoActivity extends AppCompatActivity {
      */
     private void scanAndConnect5() {
         bleManager.scanMacAndConnect(
-                DEVICE_MAC,
+                getResources().getString(R.string.device_name),
                 TIME_OUT,
                 false,
                 new BleGattCallback() {

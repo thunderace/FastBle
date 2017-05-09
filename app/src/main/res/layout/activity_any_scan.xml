@@ -23,14 +23,14 @@
             android:id="@+id/btn_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="开始扫描" />
+            android:text="@string/start_scanning" />
 
         <Button
             android:id="@+id/btn_stop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:text="停止扫描"
+            android:text="@string/stop_scanning"
             android:visibility="invisible" />
 
         <ImageView
